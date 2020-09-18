@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Spanish quiz</title>
+  
+  
+  
+  
+<style>
+body{
+  background-image: url("https://www.fluentin3months.com/wp-content/uploads/2019/04/body-parts-in-spanish.jpg");
+  background-repeat:no-repeat;
+}
+
+.correct{
+  background:green;
+}
+
+.incorrect{
+  background:red;
+}
+#q21{
+  position:absolute;
+  top:580px;
+  left:815px;
+  height:30px;
+}
+#q20{
+  position:absolute;
+  top:525px;
+  left:760px;
+  height:30px;
+}
+#q19{
+  position:absolute;
+  top:485px;
+  left:830px;
+  height:30px;
+}
+#q18{
+  position:absolute;
+  top:415px;
+  left:820px;
+  height:30px;
+}
+#q17{
+  position:absolute;
+  top:360px;
+  left:830px;
+  height:30px;
+}
+#q16{
+  position:absolute;
+  top:310px;
+  left:840px;
+  height:30px;
+}
+#q15{
+  position:absolute;
+  top:265px;
+  left:780px;
+  height:30px;
+}
+#q14{
+  position:absolute;
+  top:220px;
+  left:840px;
+  height:30px;
+}
+#q13{
+  position:absolute;
+  top:170px;
+  left:815px;
+  height:30px;
+}
+#q12{
+  position:absolute;
+  top:105px;
+  left:840px;
+  height:30px;
+}
+#q11{
+  position:absolute;
+  top:50px;
+  left:790px;
+  height:30px;
+}
+#q10{
+  position:absolute;
+  top:80px;
+  left:350px;
+  height:30px;
+}
+#q9{
+  position:absolute;
+  top:140px;
+  left:310px;
+  height:30px;
+}
+#q8{
+  position:absolute;
+  top:210px;
+  left:300px;
+  height:30px;
+}
+#q7{
+  position:absolute;
+  top:270px;
+  left:300px;
+  height:30px;
+}
+#q6{
+  position:absolute;
+  top:350px;
+  left:310px;
+  height:30px;
+}
+#q5{
+  position:absolute;
+  top:400px;
+  left:345px;
+  height:30px;
+}
+#q4{
+  position:absolute;
+  top:455px;
+  left:320px;
+  height:30px;
+}
+#q3{
+  position:absolute;
+  top:500px;
+  left:380px;
+  height:30px;
+}
+#q2{
+  position:absolute;
+  top:550px;
+  left:345px;
+  height:30px;
+}
+#q1{
+  position:absolute;
+  top:595px;
+  left:340px;
+  height:30px;
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<audio id="sad">
+  <source src="https://math.seattleacademy.org/garyanderson/snd/sad.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag
+</audio>
+<audio id="ding">
+  <source src="https://raw.githubusercontent.com/BeckLangstraat/aacoding6-6/master/Ding%20-%20Sound%20Effect%20%5BHD%5D%20(2).mp3" type="audio/mpeg">
+  Your browser does not support the audio tag
+</audio>
+<h1>Spanish Body Parts</h1>
+<div>Timer: <span id="theTime">0</span> Score: <span id="score">0</span></div>
+
+  <input id="q1" data-correct="dedo" /> 
+  <input id="q2" data-correct="tobillo" />
+  <input id="q3" data-correct="pierna" />
+  <input id="q4" data-correct="estómogo" />
+  <input id="q5" data-correct="pecho"/>
+  <input id="q6" data-correct="codo" />
+  <input id="q7" data-correct="mano"/>
+  <input id="q8" data-correct="nariz"/>
+  <input id="q9" data-correct="ojo" />
+  <input id="q10" data-correct="frente" />
+  <input id="q11" data-correct="pelo"/>
+  <input id="q12" data-correct="ceja"/>
+  <input id="q13" data-correct="oído" />
+  <input id="q14" data-correct="boca" />
+  <input id="q15" data-correct="cuello" />
+  <input id="q16" data-correct="hombro" />
+  <input id="q17" data-correct="brazo" />
+  <input id="q18" data-correct="dedo" />
+  <input id="q19" data-correct="cintura" />
+  <input id="q20" data-correct="rodilla" />
+  <input id="q21" data-correct="pie" />
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  
+      <script id="rendered-js" >
+console.clear();
+const sad = document.getElementById("sad");
+const ding = document.getElementById("ding");
+
+setInterval(upTime, 1000);
+
+function upTime() {
+  let theTime = Number($("#theTime").text());
+  theTime = theTime + 1;
+  $("#theTime").text(theTime);
+}
+$("input").change(onChange);
+
+function onChange(evt) {
+  let correct = $(this).data("correct");
+  let response = $(this).val();
+
+  if (correct == response) {
+    $(this)
+      .removeClass("incorrect")
+      .addClass("correct");
+    let theScore = Number($("#score").text());
+    theScore = theScore + 1;
+ 
+      ding.play();
+    
+    $("#score").text(theScore);
+  } else {
+    if (Math.random() > 0.1) {
+      sad.play();
+    }
+    $(this)
+      .removeClass("correct")
+      .addClass("incorrect");
+  }
+}
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
